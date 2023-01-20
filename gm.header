@@ -1,0 +1,12 @@
+// ==UserScript==
+// @name         point display on amazon wishlist
+// @namespace    https://www.amazon.co.jp/
+// @version      20230120.0
+// @description  point display on amazon wishlists
+// @downloadURL  https://raw.githubusercontent.com/rayfill/point-display/main/dist/index.user.js
+// @updateURL    https://raw.githubusercontent.com/rayfill/point-display/main/dist/index.user.js
+// @author       rayfill
+// @match        https://www.amazon.co.jp/hz/wishlist/ls*
+// @connect      amazon.co.jp
+// @run-at       document-end
+// ==/UserScript==
