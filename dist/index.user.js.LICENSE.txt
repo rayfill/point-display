@@ -1,12 +1,8 @@
 /* */
 
-/* binding */
+/* global Reflect, Promise */
 
-/* harmony export */
-
-/* harmony import */
-
-/* webpack/runtime/define property getters */
+/* unused reexport */
 
 /*! */
 
@@ -34,19 +30,30 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+/** @deprecated */
+
 /** Remove all events. */
+
+/******************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
 
 /************************************************************************/
 
 /******/
 
 /***/
-
-/*break*/
-
-/*return*/
-
-/*yield*/
 
 // ==/UserScript==
 
@@ -70,15 +77,143 @@
 
 // @updateURL    https://raw.githubusercontent.com/rayfill/point-display/main/dist/index.user.js
 
-// @version      20230120.0
+// @version      20230406.0
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/NotificationFactories.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/Observable.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/Subscriber.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/Subscription.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/config.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/observable/empty.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/observable/from.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/observable/fromEvent.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/observable/innerFrom.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/observable/merge.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/operators/OperatorSubscriber.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/operators/filter.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/operators/map.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/operators/mergeAll.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/operators/mergeInternals.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/operators/mergeMap.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/operators/observeOn.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/operators/subscribeOn.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/scheduled/scheduleArray.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/scheduled/scheduleAsyncIterable.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/scheduled/scheduleIterable.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/scheduled/scheduleObservable.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/scheduled/schedulePromise.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/scheduled/scheduleReadableStreamLike.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/scheduled/scheduled.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/symbol/observable.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/ObjectUnsubscribedError.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/UnsubscriptionError.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/args.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/arrRemove.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/createErrorClass.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/errorContext.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/executeSchedule.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/identity.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/isArrayLike.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/isAsyncIterable.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/isFunction.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/isInteropObservable.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/isIterable.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/isPromise.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/isReadableStreamLike.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/isScheduler.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/lift.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/mapOneOrManyArgs.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/noop.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/reportUnhandledError.js
+
+// CONCATENATED MODULE: ./node_modules/rxjs/dist/esm5/internal/util/throwUnobservableError.js
+
+// CONCATENATED MODULE: ./node_modules/tslib/tslib.es6.js
+
+// CONCATENATED MODULE: ./node_modules/tslog/dist/esm/BaseLogger.js
+
+// CONCATENATED MODULE: ./node_modules/tslog/dist/esm/formatNumberAddZeros.js
+
+// CONCATENATED MODULE: ./node_modules/tslog/dist/esm/formatTemplate.js
+
+// CONCATENATED MODULE: ./node_modules/tslog/dist/esm/index.js
+
+// CONCATENATED MODULE: ./node_modules/tslog/dist/esm/prettyLogStyles.js
+
+// CONCATENATED MODULE: ./node_modules/tslog/dist/esm/runtime/browser/helper.jsonStringifyRecursive.js
+
+// CONCATENATED MODULE: ./node_modules/tslog/dist/esm/runtime/browser/index.js
+
+// CONCATENATED MODULE: ./node_modules/tslog/dist/esm/runtime/browser/util.inspect.polyfil.js
+
+// CONCATENATED MODULE: ./src/dom-modify.ts
+
+// CONCATENATED MODULE: ./src/dom-to-point.ts
+
+// CONCATENATED MODULE: ./src/draw-point.ts
+
+// CONCATENATED MODULE: ./src/find-display-position.ts
+
+// CONCATENATED MODULE: ./src/get-item-point.ts
+
+// CONCATENATED MODULE: ./src/loaded-map.ts
+
+// CONCATENATED MODULE: ./src/main.ts
+
+// CONCATENATED MODULE: ./src/read-document.ts
 
 // Check if module is in cache
 
 // Create a new module (and put it into the cache)
 
-// Execute the module function
+// EXTERNAL MODULE: ./node_modules/react/index.js
 
-// Load entry module and return exports
+// Execute the module function
 
 // Return the exports of the module
 
@@ -86,183 +221,59 @@
 
 // The require function
 
-// This entry module is referenced by other modules so it can't be inlined
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 
-// define __esModule on exports
+// foreign books
 
-// define getter functions for harmony exports
+// foreign books part 2
+
+// new kindle point
 
 // no module.id needed
 
 // no module.loaded needed
 
-// startup
+// old kindle point
 
 // webpackBootstrap
-
-//# sourceMappingURL=ArgumentOutOfRangeError.js.map
-
-//# sourceMappingURL=EmptyError.js.map
-
-//# sourceMappingURL=Immediate.js.map
-
-//# sourceMappingURL=NotFoundError.js.map
-
-//# sourceMappingURL=Notification.js.map
 
 //# sourceMappingURL=NotificationFactories.js.map
 
 //# sourceMappingURL=ObjectUnsubscribedError.js.map
 
-//# sourceMappingURL=Observable.js.map
+//# sourceMappingURL=OperatorSubscriber.js.map
 
-//# sourceMappingURL=Scheduler.js.map
-
-//# sourceMappingURL=SequenceError.js.map
+//# sourceMappingURL=Subscriber.js.map
 
 //# sourceMappingURL=Subscription.js.map
 
 //# sourceMappingURL=UnsubscriptionError.js.map
 
-//# sourceMappingURL=animationFrame.js.map
-
-//# sourceMappingURL=animationFrames.js.map
-
 //# sourceMappingURL=args.js.map
-
-//# sourceMappingURL=argsArgArrayOrObject.js.map
-
-//# sourceMappingURL=argsOrArgArray.js.map
 
 //# sourceMappingURL=arrRemove.js.map
 
-//# sourceMappingURL=asap.js.map
-
-//# sourceMappingURL=async.js.map
-
-//# sourceMappingURL=audit.js.map
-
-//# sourceMappingURL=auditTime.js.map
-
-//# sourceMappingURL=bindCallback.js.map
-
-//# sourceMappingURL=bindNodeCallback.js.map
-
-//# sourceMappingURL=buffer.js.map
-
-//# sourceMappingURL=bufferWhen.js.map
-
-//# sourceMappingURL=catchError.js.map
-
-//# sourceMappingURL=combineAll.js.map
-
-//# sourceMappingURL=combineLatest.js.map
-
-//# sourceMappingURL=combineLatestAll.js.map
-
-//# sourceMappingURL=concat.js.map
-
-//# sourceMappingURL=concatAll.js.map
-
-//# sourceMappingURL=concatMap.js.map
-
-//# sourceMappingURL=concatMapTo.js.map
-
 //# sourceMappingURL=config.js.map
-
-//# sourceMappingURL=connect.js.map
-
-//# sourceMappingURL=connectable.js.map
-
-//# sourceMappingURL=count.js.map
 
 //# sourceMappingURL=createErrorClass.js.map
 
-//# sourceMappingURL=createObject.js.map
-
-//# sourceMappingURL=dateTimestampProvider.js.map
-
-//# sourceMappingURL=debounce.js.map
-
-//# sourceMappingURL=debounceTime.js.map
-
-//# sourceMappingURL=defaultIfEmpty.js.map
-
-//# sourceMappingURL=defer.js.map
-
-//# sourceMappingURL=delay.js.map
-
-//# sourceMappingURL=delayWhen.js.map
-
-//# sourceMappingURL=dematerialize.js.map
-
-//# sourceMappingURL=distinct.js.map
-
-//# sourceMappingURL=distinctUntilChanged.js.map
-
-//# sourceMappingURL=distinctUntilKeyChanged.js.map
-
-//# sourceMappingURL=elementAt.js.map
-
-//# sourceMappingURL=empty.js.map
-
 //# sourceMappingURL=errorContext.js.map
-
-//# sourceMappingURL=every.js.map
 
 //# sourceMappingURL=executeSchedule.js.map
 
-//# sourceMappingURL=exhaust.js.map
-
-//# sourceMappingURL=exhaustAll.js.map
-
-//# sourceMappingURL=exhaustMap.js.map
-
-//# sourceMappingURL=expand.js.map
-
 //# sourceMappingURL=filter.js.map
-
-//# sourceMappingURL=finalize.js.map
-
-//# sourceMappingURL=find.js.map
-
-//# sourceMappingURL=findIndex.js.map
-
-//# sourceMappingURL=first.js.map
-
-//# sourceMappingURL=firstValueFrom.js.map
-
-//# sourceMappingURL=flatMap.js.map
-
-//# sourceMappingURL=forkJoin.js.map
 
 //# sourceMappingURL=from.js.map
 
 //# sourceMappingURL=fromEvent.js.map
 
-//# sourceMappingURL=fromEventPattern.js.map
-
-//# sourceMappingURL=fromSubscribable.js.map
-
-//# sourceMappingURL=groupBy.js.map
-
 //# sourceMappingURL=identity.js.map
 
-//# sourceMappingURL=ignoreElements.js.map
-
-//# sourceMappingURL=iif.js.map
-
 //# sourceMappingURL=innerFrom.js.map
-
-//# sourceMappingURL=interval.js.map
 
 //# sourceMappingURL=isArrayLike.js.map
 
 //# sourceMappingURL=isAsyncIterable.js.map
-
-//# sourceMappingURL=isDate.js.map
-
-//# sourceMappingURL=isEmpty.js.map
 
 //# sourceMappingURL=isFunction.js.map
 
@@ -270,29 +281,19 @@
 
 //# sourceMappingURL=isIterable.js.map
 
-//# sourceMappingURL=isObservable.js.map
-
 //# sourceMappingURL=isPromise.js.map
+
+//# sourceMappingURL=isReadableStreamLike.js.map
 
 //# sourceMappingURL=isScheduler.js.map
 
 //# sourceMappingURL=iterator.js.map
 
-//# sourceMappingURL=joinAllInternals.js.map
-
-//# sourceMappingURL=last.js.map
-
-//# sourceMappingURL=lastValueFrom.js.map
-
 //# sourceMappingURL=lift.js.map
 
 //# sourceMappingURL=map.js.map
 
-//# sourceMappingURL=mapTo.js.map
-
-//# sourceMappingURL=materialize.js.map
-
-//# sourceMappingURL=max.js.map
+//# sourceMappingURL=mapOneOrManyArgs.js.map
 
 //# sourceMappingURL=merge.js.map
 
@@ -302,77 +303,15 @@
 
 //# sourceMappingURL=mergeMap.js.map
 
-//# sourceMappingURL=mergeMapTo.js.map
-
-//# sourceMappingURL=mergeScan.js.map
-
-//# sourceMappingURL=min.js.map
-
-//# sourceMappingURL=multicast.js.map
-
-//# sourceMappingURL=never.js.map
-
 //# sourceMappingURL=noop.js.map
-
-//# sourceMappingURL=not.js.map
 
 //# sourceMappingURL=observable.js.map
 
 //# sourceMappingURL=observeOn.js.map
 
-//# sourceMappingURL=of.js.map
-
-//# sourceMappingURL=onErrorResumeNext.js.map
-
-//# sourceMappingURL=pairs.js.map
-
-//# sourceMappingURL=pairwise.js.map
-
-//# sourceMappingURL=partition.js.map
-
-//# sourceMappingURL=performanceTimestampProvider.js.map
-
 //# sourceMappingURL=pipe.js.map
 
-//# sourceMappingURL=pluck.js.map
-
-//# sourceMappingURL=publish.js.map
-
-//# sourceMappingURL=publishBehavior.js.map
-
-//# sourceMappingURL=publishLast.js.map
-
-//# sourceMappingURL=publishReplay.js.map
-
-//# sourceMappingURL=queue.js.map
-
-//# sourceMappingURL=race.js.map
-
-//# sourceMappingURL=range.js.map
-
-//# sourceMappingURL=react-toast.esm.js.map
-
-//# sourceMappingURL=reduce.js.map
-
-//# sourceMappingURL=refCount.js.map
-
-//# sourceMappingURL=repeat.js.map
-
-//# sourceMappingURL=repeatWhen.js.map
-
 //# sourceMappingURL=reportUnhandledError.js.map
-
-//# sourceMappingURL=retry.js.map
-
-//# sourceMappingURL=retryWhen.js.map
-
-//# sourceMappingURL=sample.js.map
-
-//# sourceMappingURL=sampleTime.js.map
-
-//# sourceMappingURL=scan.js.map
-
-//# sourceMappingURL=scanInternals.js.map
 
 //# sourceMappingURL=scheduleArray.js.map
 
@@ -388,72 +327,6 @@
 
 //# sourceMappingURL=scheduled.js.map
 
-//# sourceMappingURL=sequenceEqual.js.map
-
-//# sourceMappingURL=share.js.map
-
-//# sourceMappingURL=shareReplay.js.map
-
-//# sourceMappingURL=single.js.map
-
-//# sourceMappingURL=skip.js.map
-
-//# sourceMappingURL=skipLast.js.map
-
-//# sourceMappingURL=skipUntil.js.map
-
-//# sourceMappingURL=skipWhile.js.map
-
-//# sourceMappingURL=startWith.js.map
-
 //# sourceMappingURL=subscribeOn.js.map
 
-//# sourceMappingURL=switchAll.js.map
-
-//# sourceMappingURL=switchMap.js.map
-
-//# sourceMappingURL=switchMapTo.js.map
-
-//# sourceMappingURL=switchScan.js.map
-
-//# sourceMappingURL=take.js.map
-
-//# sourceMappingURL=takeUntil.js.map
-
-//# sourceMappingURL=takeWhile.js.map
-
-//# sourceMappingURL=tap.js.map
-
-//# sourceMappingURL=throttle.js.map
-
-//# sourceMappingURL=throttleTime.js.map
-
-//# sourceMappingURL=throwError.js.map
-
-//# sourceMappingURL=throwIfEmpty.js.map
-
 //# sourceMappingURL=throwUnobservableError.js.map
-
-//# sourceMappingURL=timeInterval.js.map
-
-//# sourceMappingURL=timeout.js.map
-
-//# sourceMappingURL=timeoutWith.js.map
-
-//# sourceMappingURL=timer.js.map
-
-//# sourceMappingURL=timestamp.js.map
-
-//# sourceMappingURL=toArray.js.map
-
-//# sourceMappingURL=types.js.map
-
-//# sourceMappingURL=using.js.map
-
-//# sourceMappingURL=window.js.map
-
-//# sourceMappingURL=windowTime.js.map
-
-//# sourceMappingURL=windowWhen.js.map
-
-//# sourceMappingURL=zipAll.js.map

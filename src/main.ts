@@ -1,46 +1,14 @@
-import { toast } from 'react-toast';
-import { filter, fromEvent, interval, merge, mergeMap, Observable, Subject } from 'rxjs';
+import { filter, fromEvent, merge, mergeMap, Observable, Subject } from 'rxjs';
 import { DOMModify } from './dom-modify';
-import { readDocument } from './read-document';
+import { loadedMap } from './loaded-map';
+import { getItemPoint } from './get-item-point';
+import { drawPoint } from './draw-point';
+import { findDisplayPosition, getItemAnchor, getPricePoint } from './find-display-position';
+import { Logger } from 'tslog';
 
+const logger = new Logger({ name: 'main' });
 const startPoint = merge(fromEvent(window, 'DOMContentLoaded'), fromEvent(document, 'load'));
 const endPoint = fromEvent(window, 'unload');
-
-function isTargetAnchor(elm: Node): elm is HTMLAnchorElement {
-  return elm instanceof HTMLAnchorElement &&
-    typeof elm.id === 'string' &&
-    elm.id.startsWith('itemName') &&
-    typeof elm.title === 'string' &&
-    typeof elm.href === 'string' &&
-    elm.href.startsWith('https://www.amazon.co.jp/dp/');
-}
-
-const loadedMap = new Map<string, HTMLLIElement>();
-
-async function getItemPoint(url: string): Promise<string | null> {
-  try {
-    const maybeDOM = await readDocument(url);
-    if (maybeDOM === null) {
-      return null;
-    }
-    const DOM: Document = maybeDOM;
-    const node = DOM.querySelector('tr.loyalty-points span.a-color-price.a-text-bold') as HTMLSpanElement | null;
-    return node !== null ? node.innerText : null;
-  } catch (e) {
-    toast.error(String(e));
-    throw e;
-  }
-}
-
-function drawPoint(targetElement: HTMLSpanElement, maybePoint: string) {
-  const div = document.createElement('div');
-
-  if (div.querySelector('div[data-type=point]') === null) {
-    div.innerText = maybePoint;
-    div.dataset.type = 'point';
-    targetElement.appendChild(div);
-  }
-}
 
 const startPointSubscription = startPoint.subscribe(() => {
   console.log('startPoint');
@@ -53,25 +21,27 @@ const startPointSubscription = startPoint.subscribe(() => {
       console.log(listItem.dataset.itemid);
       return !loadedMap.has(listItem.dataset.itemid!);
     })).subscribe(async listItem => {
-    console.log('list item', listItem);
-    try {
+
       loadedMap.set(listItem.dataset.itemid!, listItem);
-      const itemAnchor = listItem.querySelector('a[id^=itemName][title][href^="/dp/"]') as HTMLAnchorElement | null;
+      console.log(listItem);
+      const itemAnchor = getItemAnchor(listItem);
       if (itemAnchor === null) {
+        logger.error(`itemAnchor not found`);
+        return;
+      }
+      const maybePricePlace = findDisplayPosition(listItem);
+      if (maybePricePlace === null) {
+        logger.error(`price place not found`);
         return;
       }
       const maybePoint = await getItemPoint(itemAnchor.href);
-      const maybePricePoint = listItem.querySelector('span[id^=itemPrice] > span[aria-hidden]') as HTMLSpanElement | null;
-      console.log(listItem.title, maybePoint, maybePricePoint);
-      if (maybePoint === null || maybePricePoint === null) {
+      if (maybePoint === null) {
+        logger.error(`itemPoint not found`);
         return;
       }
-      drawPoint(maybePricePoint, maybePoint);
-      console.log('draw point');
-    } catch (e) {
-      console.error(e);
-    }
-  });
+
+      drawPoint(maybePricePlace, maybePoint);
+    });
 
   const initialElements = Array.from(document.querySelectorAll('li[data-id]')) as Array<HTMLLIElement>;
   initialElements.forEach(elm => {
