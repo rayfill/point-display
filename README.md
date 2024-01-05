@@ -6,4 +6,4 @@
 
 ## 使い方
 
-自分のアカウントの(amazon wishlist)[https://www.amazon.co.jp/hz/wishlist/ls/]を表示させると裏でfetchで各商品ページからポイント数引っ張ってきてwishlistのとこにポイント数を出してくれる
+自分のアカウントの[amazon wishlist](https://www.amazon.co.jp/hz/wishlist/ls/)を表示させると裏でfetchで各商品ページからポイント数引っ張ってきてwishlistのとこにポイント数を出してくれる
